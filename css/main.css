@@ -1,0 +1,158 @@
+body {
+    padding:0px;
+    margin:0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body > div {
+    transition:all 0.3s ease;
+}
+
+nav {
+    z-index: 2;
+  width: 100%;
+  background-color: #E53D00;
+  height:42px;
+  font-weight: 600;
+    box-shadow: 0px 3px 4px #DCDCDC;
+}
+
+nav a {
+    display: block;
+    float: left;
+    font-size: 12px;
+    color: white;
+    padding-top: 13px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    text-decoration: none;
+    position:relative;
+}
+
+nav a::after {
+  background-color: white;
+  content: "";
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.down {
+    clear: both;
+    display: grid;
+    grid-template-columns: 140px auto;
+}
+
+.sidebar {
+    z-index: 1;
+    font-family:;
+    padding:1.7em;
+    font-family:'Noto Sans';
+    font-size:12px;
+    border: solid 0 1px 0 0 #DCDCDC;
+    box-shadow: 2px 0px 4px -2px #DCDCDC;
+}
+
+.display {
+    clear:both;
+    margin:15px;
+    display:grid;
+    grid-gap: 0.5em;
+}
+
+
+.offer {
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    padding: 1em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: solid 1px #DCDCDC;
+    border-radius: 10px;
+}
+
+.filter {
+    margin-top:10px;
+}
+
+.navright {
+    float: right;
+    font-size:14px;
+    padding-top:11px;
+    padding-bottom:12px;
+  font-weight: 400;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.navright::after {
+    transition:none;
+    height:0;
+}
+#logo::after {
+    transition:none;
+    height:0;
+}
+
+#logo {
+  font-size: 30px;
+  letter-spacing: -2px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: -14px;
+  padding-bottom:2px;
+}
+.bubble{
+  --width: 100%;
+  --time: 0.7s;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubble text {
+    position: relative;
+    z-index: 5;
+    transition: color var(--time);
+}
+
+.bubble:hover text {
+    color: #222;
+}
+.bubble span {
+    border-radius: 100%;
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: 0;
+    width: 0;
+    height: 0;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    transition: width var(--time), padding-top var(--time);
+}
+
+.bubble:hover span {
+    width: calc(var(--width)*2.25);
+    padding-top: calc(var(--width)* 2.25);
+}
+
+.bubble.FLASH:hover text {
+    color: white;
+}
+
+.bubble.FLASH span {
+    background: #ff3b3b;
+}
+
+.animated {
+    --angle: 5deg;
+    animation: shake 0.3s;
+}
