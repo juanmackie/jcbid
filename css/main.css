@@ -1,4 +1,8 @@
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
     padding:0px;
     margin:0px;
     font-family: 'Open Sans', sans-serif;
@@ -9,12 +13,13 @@ body > div {
 }
 
 nav {
-    z-index: 2;
+  position:fixed;
+  z-index: 2;
   width: 100%;
   background-color: #E53D00;
   height:42px;
   font-weight: 600;
-    box-shadow: 0px 3px 4px #DCDCDC;
+  box-shadow: 0px 3px 4px #DCDCDC;
 }
 
 nav a {
@@ -46,6 +51,11 @@ nav a:hover::after {
 }
 
 .down {
+    position: relative;
+    top:42px;
+    height: calc(100% - 42px);
+    max-width:960px;
+    margin: 0 auto;
     clear: both;
     display: grid;
     grid-template-columns: 140px auto;
@@ -55,7 +65,6 @@ nav a:hover::after {
     z-index: 1;
     font-family:;
     padding:1.7em;
-    font-family:'Noto Sans';
     font-size:12px;
     border: solid 0 1px 0 0 #DCDCDC;
     box-shadow: 2px 0px 4px -2px #DCDCDC;
@@ -71,7 +80,6 @@ nav a:hover::after {
 
 .offer {
     position: relative;
-    display: inline-block;
     height: 1em;
     padding: 1em;
     -webkit-border-radius: 10px;
@@ -84,6 +92,10 @@ nav a:hover::after {
     margin-top:10px;
 }
 
+.vc {
+    line-height:30px;
+    vertical-align:middle;
+}
 .navright {
     float: right;
     font-size:14px;
