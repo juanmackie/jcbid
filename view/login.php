@@ -1,7 +1,7 @@
 <?php 
   	require('../control/database.php');
   	require('../control/add.php');
-  	require('../control/log.php');
+  	//require('../control/log.php');
 
    	if($pdo->lastInsertID()){
         echo '<p>User added. You may now log in.</p>';
