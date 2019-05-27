@@ -50,6 +50,11 @@ nav a:hover::after {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .down {
     position: relative;
     top:42px;
@@ -59,6 +64,15 @@ nav a:hover::after {
     clear: both;
     display: grid;
     grid-template-columns: 140px auto;
+}
+
+.midform {
+    position: relative;
+    top:42px;
+    height: calc(100% - 42px);
+    max-width:400px;
+    margin: 0 auto;
+    clear: both;
 }
 
 .sidebar {
@@ -74,18 +88,31 @@ nav a:hover::after {
     clear:both;
     margin:15px;
     display:grid;
+    height:0px;
     grid-gap: 0.5em;
 }
 
 
 .offer {
+    display:grid;
+    grid-template-columns: auto 180px;
     position: relative;
-    height: 1em;
     padding: 1em;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border: solid 1px #DCDCDC;
     border-radius: 10px;
+}
+
+.offer:hover{
+  transition:all 0.3s ease;
+  border: solid 1px #000;
+}
+
+.offerright {
+  border-left: solid 1px #DCDCDC;
+  padding-left: 16px;
+  font-size:12px;
 }
 
 .filter {
