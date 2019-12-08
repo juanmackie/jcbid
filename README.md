@@ -5,3 +5,8 @@ PHP web application for *reverse* auctions system. Made as a project for Web Sys
 ![SS2](/images/isw2.png)
 ![SS3](/images/isw3.png)
 ![SS4](/images/isw4.png)
+## Technologies
+* Mysql
+* PHP7
+* Vanilla JS
+* Vanilla CSS
