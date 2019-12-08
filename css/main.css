@@ -20,6 +20,7 @@ nav {
   height:42px;
   font-weight: 600;
   box-shadow: 0px 3px 4px #DCDCDC;
+  line-height: inherit;
 }
 
 nav a {
@@ -49,7 +50,6 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
-
 a {
   text-decoration: none;
   color: inherit;
@@ -66,6 +66,26 @@ a {
     grid-template-columns: 140px auto;
 }
 
+.balance {
+    border-left: solid 1px #fff;
+    border-right: solid 1px #fff;
+
+
+    font-weight: normal;
+    background-color: rgba(244,244,244,0.1);
+}
+
+.downmiddle {
+    position: relative;
+    top:82px;
+    height: calc(100% - 42px);
+    max-width:660px;
+    margin: 0 auto;
+    clear: both;
+    display:block;
+    padding:15px;
+}
+
 .midform {
     position: relative;
     top:42px;
@@ -73,15 +93,29 @@ a {
     max-width:400px;
     margin: 0 auto;
     clear: both;
+    line-height:0.6;
 }
 
 .sidebar {
     z-index: 1;
-    font-family:;
     padding:1.7em;
     font-size:12px;
     border: solid 0 1px 0 0 #DCDCDC;
     box-shadow: 2px 0px 4px -2px #DCDCDC;
+}
+
+.footer {
+  display: block;
+  z-index: 6;
+  width: 100%;
+  background-color: red;
+  height:22px;
+  color:white;
+  font-weight: normal;
+  color: ;
+  background-color: #242729;
+  font-size:13px;
+  line-height: inherit;
 }
 
 .display {
@@ -92,16 +126,45 @@ a {
     grid-gap: 0.5em;
 }
 
+.pd-s {
+    padding:12px;
+}
 
 .offer {
     display:grid;
-    grid-template-columns: auto 180px;
+    grid-template-columns: auto 220px 180px;
     position: relative;
     padding: 1em;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border: solid 1px #DCDCDC;
     border-radius: 10px;
+    vertical-align: middle;
+}
+
+.offerdetails {
+    display:grid;
+    grid-template-columns: auto 220px;
+    position: relative;
+    padding: 1em;
+    border-bottom: solid 1px #DCDCDC;
+    vertical-align: middle;
+}
+.offerdetailsfirst {
+    display:grid;
+    grid-template-columns: 75px auto;
+    position: relative;
+    padding: 1em;
+    border-bottom: solid 1px #DCDCDC;
+    vertical-align: middle;
+}
+.offerdetails2 {
+    display:grid;
+    grid-template-columns: auto;
+    position: relative;
+    padding: 1em;
+    border-bottom: solid 1px #DCDCDC;
+    vertical-align: middle;
 }
 
 .offer:hover{
@@ -112,11 +175,12 @@ a {
 .offerright {
   border-left: solid 1px #DCDCDC;
   padding-left: 16px;
+  padding-right: 16px;
   font-size:12px;
 }
 
 .filter {
-    margin-top:10px;
+    margin-top:8px;
 }
 
 .vc {
@@ -131,7 +195,15 @@ a {
   font-weight: 400;
     font-family: 'Noto Sans', sans-serif;
 }
-
+.ranks {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.mg-lr {
+  margin-left:8px;
+  margin-right:8px;
+}
 .navright::after {
     transition:none;
     height:0;
@@ -194,4 +266,9 @@ a {
 .animated {
     --angle: 5deg;
     animation: shake 0.3s;
+}
+
+.btn1 {
+  position:relative;
+  margin-top:10px;
 }

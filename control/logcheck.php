@@ -10,11 +10,13 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
   	$affected=$stmt->rowCount();
   	$stmt=null;
   	if ($affected != 0) {
-         $_SESSION['use']=$user;
+         $_SESSION['user']=$user;
+         $_SESSION['userid']=$arr[0]['id'];
+         $_SESSION['isbooster']=$arr[0]['isbooster'];
          echo '<script type="text/javascript"> window.open("index.php","_self");</script>'; 
   	}
   	else {
-  		$error="<p>There is no user with given credentials. Please try again.</p>";
+  		$error="<p style='color:red;'>There is no user with matching credentials. Please try again.</p>";
   	}
 }
 ?>
